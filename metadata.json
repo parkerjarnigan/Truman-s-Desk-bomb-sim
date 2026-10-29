@@ -1,0 +1,6 @@
+{
+  "name": "Truman's Desk: YOU Decide",
+  "description": "Interactive CP World History simulation for Oak Ridge High School examining President Truman's decision to use atomic weapons against Japan in August 1945.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

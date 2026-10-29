@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #18130e;
+    color: #f5f0e6;
+  }
+}
+
+/* 1-Page Formatted PDF & Print Styling */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10pt !important;
+  }
+
+  /* Hide app navigation, top bars, buttons, and footers when printing */
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Show the printable one-page document */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Page geometry: Single 8.5x11 inch page with tight margins */
+  @page {
+    size: letter portrait;
+    margin: 0.45in;
+  }
+
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+/* Default non-print view hides print-only layout */
+@media screen {
+  .print-only {
+    display: none;
+  }
+}
